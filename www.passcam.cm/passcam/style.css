@@ -1,0 +1,583 @@
+.purple {
+    background-color: #0d235f;
+    width: 100%;
+}
+header {
+    display: block;
+    unicode-bidi: isolate;
+}
+.purple-wrap-image img {
+    height: 80px;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.purple-wrap {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.start__inner {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+.start-block, .start-block__item {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.start-block, .start-block__item {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.start-block {
+    margin: 30px 20px 0;
+}
+.start-block {
+    margin: 30px 20px 0;
+}
+       .switch {
+    width: 100%;
+    box-sizing: border-box;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+.person__title {
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+    
+}
+.switch {
+    width: 100%;
+}
+.sign {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #009028;
+}
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    margin-top: 25px;
+    margin-bottom: 47px;
+}
+.image-circle-blue, .image-circle-green {
+    max-width: 35px;
+    min-width: 35px;
+    max-height: 35px;
+    min-height: 35px;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 3px;
+}
+
+.image-circle-green {
+    background: #009128;
+}
+.circle-number {
+    position: absolute;
+    top: 8px;
+    right: 13px;
+    color: #fff;
+}
+.image-circle-blue, .image-circle-green {
+    max-width: 35px;
+    min-width: 35px;
+    max-height: 35px;
+    min-height: 35px;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 3px;
+}
+
+.image-circle-green {
+    background: #009128;
+}
+.image-block-green {
+    background: #009028;
+    width: 26px;
+    height: 5px;
+}
+.image-block-blue {
+    background: #2697ff;
+    width: 26px;
+    height: 5px;
+}
+.image-circle-blue {
+    background: #2697ff;
+}
+
+.image-circle-blue, .image-circle-green {
+    max-width: 35px;
+    min-width: 35px;
+    max-height: 35px;
+    min-height: 35px;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 3px;
+}
+.circle-number {
+    position: absolute;
+    top: 8px;
+    right: 13px;
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+.image-block-blue {
+    background: #2697ff;
+    width: 26px;
+    height: 5px;
+}
+.image-block-blue {
+    background: #2697ff;
+    width: 26px;
+    height: 5px;
+}
+.image-circle-blue {
+    background: #2697ff;
+}
+.app {
+    justify-content: center;
+    padding: 40px 10px;
+    position: relative;
+}
+.sign-number {
+    font-weight: 400;
+    line-height: 19px;
+    color: #7a7a7a;
+    margin-top: 8px;
+}
+element.style {
+}
+.procedure {
+    margin: 0 auto;
+}
+.title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #009028;
+}
+.procedure__title {
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.procedure__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    color: #7a7a7a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.procedure__wrapper {
+    text-align: center;
+    padding: 24px 0;
+    max-width: 180px;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid #2697ff;
+    box-sizing: border-box;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    color: #585858;
+    cursor: pointer;
+}
+.main-button {
+    font-family: "Play", monospace;
+    font-size: 16px;
+    background: #fff;
+    border: 1px solid #2697ff;
+    box-sizing: border-box;
+    border-radius: 9px;
+    width: 168px;
+    height: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: #7a7a7a;
+    transition: .3s;
+    cursor: pointer;
+}
+.react-tel-input .form-control {
+    position: relative;
+    font-size: 14px;
+    letter-spacing: .01rem;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-left: 48px;
+    margin-left: 0;
+    background: #fff;
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    line-height: 25px;
+    height: 35px;
+    width: 300px;
+    outline: none;
+}
+.sign-input {
+    background: #fff;
+    border: 1px solid #7a7a7a;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 18px 10px 18px 15px;
+    height: 20px;
+    max-width: 200px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    background-size: auto 50%;
+}
+.sign-name, .sign-number {
+    font-style: normal;
+    text-align: center;
+}
+.react-tel-input {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    position: relative;
+    width: 100%;
+}
+.react-tel-input .special-label {
+    display: none;
+    white-space: nowrap;
+}
+input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]) {
+    overflow-clip-margin: 0px !important;
+    overflow: clip !important;
+}
+feuille de style de l’agent utilisateur
+input[type="tel" i] {
+    direction: ltr;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+feuille de style de l’agent utilisateur
+input:not([type="file" i], [type="image" i], [type="checkbox" i], [type="radio" i]) {
+}
+.react-tel-input * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.react-tel-input {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    position: relative;
+    width: 100%;
+}
+input {
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-variant-alternates: ;
+    font-variant-position: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    font-optical-sizing: ;
+    font-size-adjust: ;
+    font-kerning: ;
+    font-feature-settings: ;
+    font-variation-settings: ;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+
+.react-tel-input .invalid-number-message, .react-tel-input .special-label {
+    position: absolute;
+    z-index: 1;
+    font-size: 13px;
+    left: 46px;
+    top: -8px;
+    background: #fff;
+    padding: 0 2px;
+}
+
+.app, .header {
+    max-width: 810px;
+    margin: auto;
+    display: flex;
+}
+.image-circle-blue, .image-circle-green {
+    max-width: 35px;
+    min-width: 35px;
+    max-height: 35px;
+    min-height: 35px;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 3px;
+}
+.circle-number {
+    position: absolute;
+    top: 8px;
+    right: 13px;
+    color: #fff;
+}
+.image-block-blue {
+    background: #2697ff;
+    width: 26px;
+    height: 5px;
+}
+.sign-name, .sign-number {
+    font-style: normal;
+    text-align: center;
+}
+
+.sign-name {
+    font-family: "Play";
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000;
+}
+.input-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+}
+.sign-number {
+    font-weight: 400;
+    line-height: 19px;
+    color: #7a7a7a;
+    margin-top: 8px;
+}
+
+.sign-name, .sign-number {
+    font-style: normal;
+    text-align: center;
+}
+.sign-input {
+    background: #fff;
+    border: 1px solid #7a7a7a;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 18px 10px 18px 15px;
+    height: 20px;
+    max-width: 200px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    background-size: auto 50%;
+}
+element.style {
+    width: 250px;
+    max-width: 250px;
+}
+.sign-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-button {
+    font-family: "Play", monospace;
+    font-size: 16px;
+    background: #fff;
+    border: 1px solid #2697ff;
+    box-sizing: border-box;
+    border-radius: 9px;
+    width: 168px;
+    height: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: #7a7a7a;
+    transition: .3s;
+    cursor: pointer;
+}
+.select-main, .select-main select {
+    position: absolute;
+    box-sizing: border-box;
+}
+.select-main {
+    border: 1px solid #7a7a7a;
+    border-radius: 4px;
+    align-self: flex-start;
+    padding: 0 3px;
+    right: 0;
+    margin: 0 6px;
+}
+.lang-item {
+    font-family: "Play", monospace;
+    display: flex;
+    padding: 8px 12px;
+    border-bottom: 1px solid #dadada;
+    cursor: pointer;
+}
+.lang-item__text {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: #7a7a7a;
+}
+.release-version {
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-top: 40px;
+    text-align: right;
+}
+
+* {
+    box-sizing: border-box;
+}
+feuille de style de l’agent utilisateur
+footer {
+    display: block;
+    unicode-bidi: isolate;
+}
+.person__number, .person__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+.person__subtitle {
+    line-height: 19px;
+    color: #7a7a7a;
+    margin-top: 6px;
+}
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.start-block__item {
+    font-size: 16px;
+    font-family: "Play", monospace;
+    flex-direction: column;
+    align-items: center;
+    width: 170px;
+    height: 70px;
+    cursor: pointer;
+    border: 1px solid #7a7a7a;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, .2);
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: #7a7a7a;
+    background-color: #fff;
+    text-align: center;
+}
+.start-block, .start-block__item {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+button {
+    appearance: auto;
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-variant-alternates: ;
+    font-variant-position: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    font-optical-sizing: ;
+    font-size-adjust: ;
+    font-kerning: ;
+    font-feature-settings: ;
+    font-variation-settings: ;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    margin: 0em;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+.release-version {
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-top: 40px;
+    text-align: right;
+}
+footer {
+    display: block;
+    unicode-bidi: isolate;
+}

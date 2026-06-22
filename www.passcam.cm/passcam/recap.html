@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="description" content="Cameroon ePassport Self-Service Portal">
+    <link rel="icon" href="aa.jfif">
+    <link rel="stylesheet" href="style1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Récapitulatif - Cameroun</title>
+    <style>
+    /* ── Breadcrumb Tabs (shared) ── */
+    .tabs { display:flex; width:100%; margin:10px 0 20px; height:46px; border:1px solid #c8c8c8; border-radius:3px; overflow:hidden; }
+    .btn-wrap { flex:1; display:flex; position:relative; }
+    .btn-wrap:nth-child(1){ z-index:4; } .btn-wrap:nth-child(2){ z-index:3; } .btn-wrap:nth-child(3){ z-index:2; } .btn-wrap:nth-child(4){ z-index:1; }
+    .btn-wrap .btn { flex:1; display:flex; align-items:center; justify-content:center; padding:8px 8px 8px 22px; background:#ebebeb; position:relative; text-align:center; cursor:pointer; }
+    .btn-wrap:first-child .btn { padding-left:10px; }
+    .btn-wrap:not(:last-child) .btn::before { content:''; position:absolute; top:0; right:-15px; border-top:23px solid transparent; border-bottom:23px solid transparent; border-left:15px solid #c8c8c8; z-index:2; }
+    .btn-wrap:not(:last-child) .btn::after  { content:''; position:absolute; top:0; right:-13px; border-top:23px solid transparent; border-bottom:23px solid transparent; border-left:13px solid #ebebeb; z-index:3; }
+    .btn-wrap .btn > span { font-size:11.5px; font-weight:600; color:#c0392b; line-height:1.3; position:relative; z-index:5; cursor:pointer; }
+    .btn-wrap .btn.valid > span { color:#27ae60; }
+    .btn-wrap .btn.active { background:#dcdcdc; }
+    .btn-wrap .btn.active::after { border-left-color:#dcdcdc; }
+
+    /* ── Recap layout ── */
+    .recap-block { margin-bottom: 22px; }
+    .recap-block-title {
+        font-size: 13px;
+        font-weight: 700;
+        color: #2c3e50;
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    .recap-row {
+        display: flex;
+        align-items: baseline;
+        padding: 3px 0;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    .rl {
+        color: #888;
+        min-width: 180px;
+        flex-shrink: 0;
+        font-size: 12px;
+    }
+    .rv {
+        font-weight: 600;
+        color: #111;
+    }
+    .recap-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 28px;
+    }
+    .recap-subtitle {
+        text-align: center;
+        color: #555;
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    .req-number {
+        text-align: center;
+        font-weight: 700;
+        font-size: 13px;
+        color: #c0392b;
+        margin-bottom: 18px;
+        letter-spacing: .5px;
+    }
+    </style>
+</head>
+<body>
+<div id="root"><div><div class="layout"><div class="wr">
+
+<header class="purple">
+    <div class="purple-wrap">
+        <div class="purple-wrap-image"><img src="Police.png" alt=""></div>
+        <div class="purple-wrap-image"><img src="a.png" alt=""></div>
+    </div>
+</header>
+
+<div class="app">
+  <div class="switch">
+    <div class="form">
+
+      <!-- Stepper: 1-4 green (done), 5 blue (current) -->
+      <div class="image">
+          <div class="image-circle-green"><span class="circle-number">1</span></div>
+          <div class="image-block-green"></div><div class="image-block-green"></div>
+          <div class="image-circle-green"><span class="circle-number">2</span></div>
+          <div class="image-block-green"></div><div class="image-block-green"></div>
+          <div class="image-circle-green"><span class="circle-number">3</span></div>
+          <div class="image-block-green"></div><div class="image-block-green"></div>
+          <div class="image-circle-green"><span class="circle-number">4</span></div>
+          <div class="image-block-green"></div><div class="image-block-blue"></div>
+          <div class="image-circle-blue"><span class="circle-number">5</span></div>
+      </div>
+
+      <!-- Tabs navigation -->
+      <div class="tabs">
+          <div class="btn-wrap"><div class="btn valid"><span onclick="window.location.href='form1.html'">Informations générales</span></div></div>
+          <div class="btn-wrap"><div class="btn valid"><span onclick="window.location.href='form2.html'">Informations personnelles</span></div></div>
+          <div class="btn-wrap"><div class="btn valid"><span onclick="window.location.href='form3.html'">Informations parentales</span></div></div>
+          <div class="btn-wrap"><div class="btn valid active"><span onclick="window.location.href='form4.html'">Informations sur les documents</span></div></div>
+      </div>
+
+      <div class="title" style="margin-bottom:4px;">Confirmez les informations personnelles</div>
+      <div class="recap-subtitle">Vérifiez les informations qui ont été saisies sur les pages précédentes</div>
+      <div class="req-number" id="req-number">NUMÉRO DE LA DEMANDE: …</div>
+
+      <!-- ── Données personnelles ── -->
+      <div class="recap-block">
+          <div class="recap-block-title">Données personnelles</div>
+          <div class="recap-row"><span class="rl">Prénoms:</span><span class="rv" id="r_prenom"></span></div>
+          <div class="recap-row"><span class="rl">Nom(s):</span><span class="rv" id="r_nom"></span></div>
+          <div class="recap-row"><span class="rl">Sexe:</span><span class="rv" id="r_sexe"></span></div>
+          <div class="recap-row"><span class="rl">Téléphone mobile:</span><span class="rv" id="r_tel"></span></div>
+          <div class="recap-row"><span class="rl">Date de naissance:</span><span class="rv" id="r_dob"></span></div>
+          <div class="recap-row"><span class="rl">Pays de naissance:</span><span class="rv" id="r_pays_naiss"></span></div>
+          <div class="recap-row"><span class="rl">Région de naissance:</span><span class="rv" id="r_region_naiss"></span></div>
+          <div class="recap-row"><span class="rl">Département de naissance:</span><span class="rv" id="r_dept_naiss"></span></div>
+          <div class="recap-row"><span class="rl">Adresse électronique:</span><span class="rv" id="r_email"></span></div>
+          <div class="recap-row"><span class="rl">Profession:</span><span class="rv" id="r_prof"></span></div>
+      </div>
+
+      <!-- ── Lieu de résidence ── -->
+      <div class="recap-block">
+          <div class="recap-block-title">Lieu de résidence</div>
+          <div class="recap-grid">
+              <div class="recap-row"><span class="rl">Pays:</span><span class="rv" id="r_res_pays"></span></div>
+              <div class="recap-row"><span class="rl">Lieu:</span><span class="rv" id="r_res_lieu"></span></div>
+              <div class="recap-row"><span class="rl">Région:</span><span class="rv" id="r_res_region"></span></div>
+              <div class="recap-row"><span class="rl">Rue:</span><span class="rv" id="r_res_rue"></span></div>
+              <div class="recap-row"><span class="rl">Département:</span><span class="rv" id="r_res_dept"></span></div>
+          </div>
+      </div>
+
+      <!-- ── Information sur la CNI ── -->
+      <div class="recap-block">
+          <div class="recap-block-title">Information sur la CNI</div>
+          <div class="recap-grid">
+              <div class="recap-row"><span class="rl">Numéro de la CNI:</span><span class="rv" id="r_cni"></span></div>
+              <div class="recap-row"><span class="rl">Date de délivrance de la CNI:</span><span class="rv" id="r_cni_date"></span></div>
+              <div></div>
+              <div class="recap-row"><span class="rl">Date d'expiration:</span><span class="rv" id="r_cni_exp"></span></div>
+          </div>
+      </div>
+
+      <!-- ── Informations sur les parents ── -->
+      <div class="recap-block">
+          <div class="recap-block-title">Informations sur les parents</div>
+          <div class="recap-row"><span class="rl">Prénoms de la mère:</span><span class="rv" id="r_mere_prenom"></span></div>
+          <div class="recap-row"><span class="rl">Nom(s) de la mère:</span><span class="rv" id="r_mere_nom"></span></div>
+          <div class="recap-row"><span class="rl">Prénoms du père:</span><span class="rv" id="r_pere_prenom"></span></div>
+          <div class="recap-row"><span class="rl">Nom(s) du père:</span><span class="rv" id="r_pere_nom"></span></div>
+      </div>
+
+      <!-- ── Boutons ── -->
+      <div class="form__footer">
+          <button onclick="window.location.href='form1.html'" class="main-button" type="button">Modifier les données</button>
+          <button onclick="window.location.href='paiement.html'" class="main-button" type="button">Confirmer</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="release-version">V.20220622-1700cmr-1.90-329-g1dfc1ebcaa </footer>
+</div></div></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script>
+(function() {
+    var f2 = JSON.parse(localStorage.getItem('form2') || '{}');
+    var f3 = JSON.parse(localStorage.getItem('form3') || '{}');
+    var f4 = JSON.parse(localStorage.getItem('form4') || '{}');
+
+    function set(id, val) {
+        var el = document.getElementById(id);
+        if (el) el.textContent = val && val.trim() ? val : '—';
+    }
+
+    /* Données personnelles (form2) */
+    set('r_prenom',      f2['Prénoms']);
+    set('r_nom',         f2['Nom(s)']);
+    set('r_sexe',        f2['Sexe']);
+    set('r_tel',         f2['Numéro']);
+    set('r_dob',         f2['Date de naissance']);
+    set('r_pays_naiss',  f2['Pays de résidence']);
+    set('r_region_naiss',f2['Région de naissance']);
+    set('r_dept_naiss',  f2['Département de naissance']);
+    set('r_email',       f2['Adresse électronique']);
+    set('r_prof',        f2['Proféssion']);
+
+    /* Lieu de résidence (form2) */
+    set('r_res_pays',    f2['Pays']);
+    set('r_res_lieu',    f2['Lieu']);
+    set('r_res_region',  f2['Région']);
+    set('r_res_rue',     f2['Rue']);
+    set('r_res_dept',    f2['Département']);
+
+    /* CNI (form4) */
+    set('r_cni',         f4['Numéro de la CNI']);
+    set('r_cni_date',    f4['Date de délivrance de la CNI']);
+    set('r_cni_exp',     f4["Date d'expiration"]);
+
+    /* Parents (form3) */
+    set('r_mere_prenom', f3['Prénoms de la mère']);
+    set('r_mere_nom',    f3['Nom(s) de la mère']);
+    set('r_pere_prenom', f3['Prénoms du père']);
+    set('r_pere_nom',    f3['Nom(s) du père']);
+
+    /* Numéro de demande dynamique */
+    var d = new Date();
+    var p = function(n){ return n < 10 ? '0'+n : ''+n; };
+    var rand = String(Math.floor(Math.random()*999999)).padStart(6,'0');
+    var num = 'PO-' + d.getFullYear() + p(d.getMonth()+1) + p(d.getDate()) + '-' + rand;
+    document.getElementById('req-number').textContent = 'NUMÉRO DE LA DEMANDE: ' + num;
+})();
+</script>
+</body>
+</html>

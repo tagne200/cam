@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Cameroon ePassport Self-Service Portal">
+    <link rel="icon" href="aa.jfif">
+    <link rel="stylesheet" href="style2.css">
+    <style>
+    /* ── Breadcrumb Tabs ── */
+    .tabs { display:flex; width:100%; margin:10px 0 20px; height:46px; border:1px solid #c8c8c8; border-radius:3px; overflow:hidden; }
+    .btn-wrap { flex:1; display:flex; position:relative; }
+    .btn-wrap:nth-child(1){ z-index:4; } .btn-wrap:nth-child(2){ z-index:3; } .btn-wrap:nth-child(3){ z-index:2; } .btn-wrap:nth-child(4){ z-index:1; }
+    .btn-wrap .btn { flex:1; display:flex; align-items:center; justify-content:center; padding:8px 8px 8px 22px; background:#ebebeb; position:relative; text-align:center; cursor:pointer; }
+    .btn-wrap:first-child .btn { padding-left:10px; }
+    .btn-wrap:not(:last-child) .btn::before { content:''; position:absolute; top:0; right:-15px; border-top:23px solid transparent; border-bottom:23px solid transparent; border-left:15px solid #c8c8c8; z-index:2; }
+    .btn-wrap:not(:last-child) .btn::after  { content:''; position:absolute; top:0; right:-13px; border-top:23px solid transparent; border-bottom:23px solid transparent; border-left:13px solid #ebebeb; z-index:3; }
+    .btn-wrap .btn.active { background:#dcdcdc; }
+    .btn-wrap .btn.active::after { border-left-color:#dcdcdc; }
+    .btn-wrap .btn > span { font-size:11.5px; font-weight:600; color:#c0392b; line-height:1.3; position:relative; z-index:5; cursor:pointer; }
+    .btn-wrap .btn.valid > span { color:#27ae60; }
+    /* ── Validation ── */
+    .field-error { border:2px solid #e74c3c !important; background:#fff8f8 !important; }
+    /* ── Champs entièrement cliquables ── */
+    .input-title { pointer-events: none; cursor: default; margin-bottom: 6px; }
+    .input-title .required { pointer-events: auto; }
+    .inputs-item .input-item {
+        display: block !important;
+        width: 100% !important;
+        position: relative;
+        z-index: 1;
+        cursor: text;
+    }
+    .inputs-item select.input-item { cursor: pointer; }
+    .input-group, .react-datepicker-wrapper, .react-datepicker__input-container {
+        display: block !important;
+        width: 100% !important;
+    }
+    /* Neutralise l'overlay de notifications (position:fixed, z-index:9000) qui bloquait les clics au centre des champs */
+    .notifications-component, .notifications-component * { pointer-events: none !important; }
+    /* Annule le skew hérité qui déformait l'ancien système d'onglets */
+    .btn-wrap .btn { transform: none !important; }
+    .btn-wrap .btn > span { transform: none !important; }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cameroun</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="root">
+        <div>
+          <div class="layout">
+            <div class="wr">
+    <header class="purple">
+        <div class="purple-wrap">
+            <div class="purple-wrap-image"><img src="Police.png" alt=""></div>
+            <div class="purple-wrap-image"><img src="a.png" alt=""></div>
+        </div>
+    </header>
+    <div class="app">
+        <div class="notifications-component ">
+            <div class="notification-container--top-full"></div>
+            <div class="notification-container--bottom-full"></div>
+            <div class="notification-container--top-left"></div>
+            <div class="notification-container--top-right"></div>
+            <div class="notification-container--bottom-left"></div>
+            <div class="notification-container--bottom-right"></div>
+            <div class="notification-container--top-center"></div>
+            <div class="notification-container--center">
+                <div class="flex-center"></div>
+            </div>
+            <div class="notification-container--bottom-center"></div>
+        </div>
+        <div class="switch">
+            <form class="form">
+                
+                <div class="title">Entrez les informations biographiques</div>
+                <div class="person__title">Informations personnelles</div>
+                <div class="image">
+                    <div class="image-circle-green"><span class="circle-number">1</span></div>
+                    <div class="image-block-green"></div>
+                    <div class="image-block-green"></div>
+                    <div class="image-circle-green"><span class="circle-number">2</span></div>
+                    <div class="image-block-green"></div>
+                    <div class="image-block-blue"></div>
+                    <div class="image-circle-blue"><span class="circle-number">3</span></div>
+                    <div class="image-block-blue"></div>
+                    <div class="image-block-blue"></div>
+                    <div class="image-circle-blue"><span class="circle-number">4</span></div>
+                    <div class="image-block-blue"></div>
+                    <div class="image-block-blue"></div>
+                    <div class="image-circle-blue"><span class="circle-number">5</span></div>
+                </div>
+                
+                <div class="person__subtitle">Entrez vos informations personnelles ci-dessous</div>
+                <div class="person__number">NUMÉRO DE LA DEMANDE: PO-20240826-000781</div>
+                <div class="tabs">
+                    <div class="btn-wrap"><div class="btn valid"><span onclick="window.location.href='form1.html'">Informations générales</span></div></div>
+                    <div class="btn-wrap"><div class="btn active"><span onclick="window.location.href='form2.html'">Informations personnelles</span></div></div>
+                    <div class="btn-wrap"><div class="btn"><span onclick="window.location.href='form3.html'">Informations parentales</span></div></div>
+                    <div class="btn-wrap"><div class="btn valid"><span onclick="window.location.href='form4.html'">Informations sur les documents</span></div></div>
+                </div>
+                <div class="form__wrapper">
+                    <div>
+                        <div class="personData-title">Données personnelles</div>
+                        <div class="inputs">
+                            <div class="inputs-item"><label class="input-title">Prénoms</label><input type="text"
+                                    class="input-item" placeholder="Prénoms" name="givenName" value=""></div>
+                            <div class="inputs-item"><label class="input-title">Nom(s)<span
+                                        class="required">*</span></label><input type="text" class="input-item"
+                                    placeholder="Nom(s)" name="surname" value=""></div>
+                            <div class="inputs-item"><label class="input-title">Sexe<span
+                                        class="required">*</span></label><select class="input-item" name="gender"
+                                    placeholder="Sexe">
+                                    <option value="11216">Masculin</option>
+                                    <option value="11217">Féminin</option>
+                                </select></div>
+                            <div class="inputs-item"><label class="input-title">Date de naissance<span
+                                        class="required">*</span></label>
+                                <div class="input-group">
+                                    <div class="react-datepicker-wrapper">
+                                        <div class="react-datepicker__input-container"><input type="text"
+                                                placeholder="dd.mm.yyyy" class="input-item" value=""></div>
+                                    </div><br>
+                                    
+                                </div>
+                                <input type="checkbox" name="" id=""><span>Je ne connais pas ma date de naissance</span>
+                            </div>
+                            <div class="inputs-item"><label class="input-title">Pays de résidence<span
+                                class="required">*</span></label><input type="text" class="input-item"
+                            placeholder="Pays de résidence" name="surname" value=""></div>
+                            <div class="inputs-item"><label class="input-title">Région de naissance<span
+                                class="required">*</span></label><input type="text" class="input-item"
+                            placeholder="Région de naissance" name="surname" value="" ></div>
+                            <div class="inputs-item"><label class="input-title">Département de naissance<span
+                                class="required">*</span></label><input type="text" class="input-item"
+                            placeholder="Département de naissance" name="surname" value=""></div><br>
+                            <div><span>Phone number</span><span
+                                class="required">*</span></div>
+                            <div class="inputs-item"><label class="input-title">Numéro<span
+                                class="required">*</span></label><input type="text" class="input-item"
+                            placeholder="Phone" name="surname" value=""></div>
+                            <div class="inputs-item"><label class="input-title">Adresse électronique<span
+                                class="required">*</span></label><input type="text" class="input-item"
+                            placeholder="Adresse électronique" name="surname" value=""></div><br>
+                            <div><span>Lieu de résidence</span><span
+                                class="required">*</span></div>
+                            <div class="inputs-item"><label class="input-title">Pays<span
+                                class="required">*</span></label><input type="text" class="input-item"
+                            placeholder="CAMEROUN" name="surname" value="CAMEROUN"></div>
+                            <div class="inputs-item"><label class="input-title">Région<span
+                                class="required">*</span></label><input type="text" class="input-item"
+                            placeholder="Région" name="surname" value=""></div>
+                            <div class="inputs-item"><label class="input-title">Département<span
+                                class="required">*</span></label><input type="text" class="input-item"
+                            placeholder="Département" name="surname" value=""></div>
+                            <div class="inputs-item"><label class="input-title">Lieu<span
+                                class="required">*</span></label><input type="text" class="input-item"
+                            placeholder="Lieu" name="surname" value=""></div>
+                            <div class="inputs-item"><label class="input-title">Rue<span
+                                        class="required">*</span></label><input type="text" class="input-item"
+                                    placeholder="Détails du lieu de résidence" name="resAddressStreet" value=""></div>
+                                    <div class="inputs-item"><label class="input-title">Proféssion<span
+                                        class="required">*</span></label><input type="text" class="input-item"
+                                    placeholder="Détails sur la Proféssion" name="resAddressStreet" value=""></div>
+                        </div>
+                        
+                    
+                    </div>
+                </div>
+                <div class="form__footer"><button onclick="window.location.href='form1.html'" class="main-button" type="button">Précédent</button><button onclick="validateAndGo('form3.html')" class="main-button" type="button">Suivant</button></div>
+                </form>
+        </div>
+        
+    
+    </div>
+    <footer class="release-version">V.20220622-1700cmr-1.90-329-g1dfc1ebcaa </footer>
+</div></div></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+    function saveFormData(key) {
+        var data = {};
+        document.querySelectorAll('.inputs-item').forEach(function(item) {
+            var label = item.querySelector('.input-title');
+            var field = item.querySelector('input:not([type=checkbox]), select');
+            if (label && field) {
+                var k = label.textContent.replace(/\*/g,'').trim();
+                var v = field.tagName==='SELECT' && field.selectedIndex>=0
+                    ? field.options[field.selectedIndex].text : field.value;
+                data[k] = v;
+            }
+        });
+        localStorage.setItem(key, JSON.stringify(data));
+    }
+    function validateAndGo(url) {
+        var items = document.querySelectorAll('.inputs-item');
+        var ok = true;
+        items.forEach(function(item) {
+            if (!item.querySelector('.required')) return;
+            var field = item.querySelector('input:not([type=checkbox]), select');
+            if (!field) return;
+            field.classList.remove('field-error');
+            if (!field.value || field.value.trim() === '') {
+                field.classList.add('field-error');
+                ok = false;
+            }
+        });
+        if (ok) { saveFormData('form2'); window.location.href = url; return; }
+        var msg = document.getElementById('err-msg');
+        if (!msg) {
+            msg = document.createElement('div');
+            msg.id = 'err-msg';
+            msg.style.cssText = 'position:fixed;top:16px;left:50%;transform:translateX(-50%);background:#e74c3c;color:#fff;padding:11px 24px;border-radius:5px;z-index:9999;font-size:13px;font-weight:600;box-shadow:0 2px 8px rgba(0,0,0,0.25);display:none;';
+            document.body.appendChild(msg);
+        }
+        msg.textContent = 'Veuillez remplir tous les champs obligatoires (*).';
+        msg.style.display = 'block';
+        setTimeout(function(){ msg.style.display = 'none'; }, 3000);
+    }
+    </script>
+</body>
+
+</html>

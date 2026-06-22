@@ -1,0 +1,827 @@
+element.style {
+}
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+* {
+    box-sizing: border-box;
+}
+feuille de style de l’agent utilisateur
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+.purple {
+    background-color: #0d235f;
+    width: 100%;
+}
+.purple-wrap {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.purple-wrap-image img {
+    height: 80px;
+}
+.purple-wrap-image img {
+    height: 80px;
+}
+.purple {
+    background-color: #0d235f;
+    width: 100%;
+}
+.app {
+    justify-content: center;
+    padding: 40px 10px;
+    position: relative;
+}
+
+.app, .header {
+    max-width: 810px;
+    margin: auto;
+    display: flex;
+}
+.notifications-component {
+    position: fixed;
+    z-index: 9000;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+.notification-container--bottom-full, .notification-container--top-full {
+    width: 100%;
+    min-width: 100%;
+}
+.notification-container--bottom-center, .notification-container--bottom-full, .notification-container--bottom-left, .notification-container--bottom-right, .notification-container--center, .notification-container--top-center, .notification-container--top-full, .notification-container--top-left, .notification-container--top-right {
+    min-width: 325px;
+    position: absolute;
+    pointer-events: all;
+}
+* {
+    box-sizing: border-box;
+}
+feuille de style de l’agent utilisateur
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.notifications-component {
+    position: fixed;
+    z-index: 9000;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+.notification-container--bottom-full {
+    bottom: 0;
+}
+.notification-container--bottom-full, .notification-container--top-full {
+    width: 100%;
+    min-width: 100%;
+}
+.notification-container--bottom-center, .notification-container--bottom-full, .notification-container--bottom-left, .notification-container--bottom-right, .notification-container--center, .notification-container--top-center, .notification-container--top-full, .notification-container--top-left, .notification-container--top-right {
+    min-width: 325px;
+    position: absolute;
+    pointer-events: all;
+}
+* {
+    box-sizing: border-box;
+}
+feuille de style de l’agent utilisateur
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.notifications-component {
+    position: fixed;
+    z-index: 9000;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+.notification-container--top-left {
+    left: 20px;
+    top: 20px;
+}
+
+.notification-container--bottom-center, .notification-container--bottom-full, .notification-container--bottom-left, .notification-container--bottom-right, .notification-container--center, .notification-container--top-center, .notification-container--top-full, .notification-container--top-left, .notification-container--top-right {
+    min-width: 325px;
+    position: absolute;
+    pointer-events: all;
+}
+* {
+    box-sizing: border-box;
+}
+feuille de style de l’agent utilisateur
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.notifications-component {
+    position: fixed;
+    z-index: 9000;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+.notification-container--top-right {
+    right: 20px;
+    top: 20px;
+}
+.notification-container--bottom-center, .notification-container--bottom-full, .notification-container--bottom-left, .notification-container--bottom-right, .notification-container--center, .notification-container--top-center, .notification-container--top-full, .notification-container--top-left, .notification-container--top-right {
+    min-width: 325px;
+    position: absolute;
+    pointer-events: all;
+}
+* {
+    box-sizing: border-box;
+}
+feuille de style de l’agent utilisateur
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.notifications-component {
+    position: fixed;
+    z-index: 9000;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+.notification-container--bottom-left {
+    left: 20px;
+    bottom: 20px;
+}
+.notification-container--bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+.notification-container--top-center {
+    top: 20px;
+}
+.notification-container--bottom-center, .notification-container--center, .notification-container--top-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: calc(50% - 175px);
+    max-width: 350px;
+}
+.notification-container--bottom-center, .notification-container--bottom-full, .notification-container--bottom-left, .notification-container--bottom-right, .notification-container--center, .notification-container--top-center, .notification-container--top-full, .notification-container--top-left, .notification-container--top-right {
+    min-width: 325px;
+    position: absolute;
+    pointer-events: all;
+}
+.notification-container--center {
+    top: 20px;
+    height: 100%;
+    pointer-events: none;
+}
+.notification-container--bottom-center, .notification-container--center, .notification-container--top-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: calc(50% - 175px);
+    max-width: 350px;
+}
+.notification-container--bottom-center, .notification-container--bottom-full, .notification-container--bottom-left, .notification-container--bottom-right, .notification-container--center, .notification-container--top-center, .notification-container--top-full, .notification-container--top-left, .notification-container--top-right {
+    min-width: 325px;
+    position: absolute;
+    pointer-events: all;
+}
+* {
+    box-sizing: border-box;
+}
+feuille de style de l’agent utilisateur
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+.notifications-component {
+    position: fixed;
+    z-index: 9000;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+}
+.notification-container--bottom-center {
+    bottom: 20px;
+}
+.notification-container--bottom-center, .notification-container--center, .notification-container--top-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: calc(50% - 175px);
+    max-width: 350px;
+}
+.notification-container--bottom-center, .notification-container--bottom-full, .notification-container--bottom-left, .notification-container--bottom-right, .notification-container--center, .notification-container--top-center, .notification-container--top-full, .notification-container--top-left, .notification-container--top-right {
+    min-width: 325px;
+    position: absolute;
+    pointer-events: all;
+}
+.switch {
+    width: 90%;
+}
+form {
+    display: block;
+    margin-top: 0em;
+    unicode-bidi: isolate;
+}
+.title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #009028;
+}
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    margin-top: 25px;
+    margin-bottom: 47px;
+}
+.person__title {
+    font-family: "Play";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+}
+.person__number, .person__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+.person__subtitle {
+    line-height: 19px;
+    color: #7a7a7a;
+    margin-top: 6px;
+}
+.person__number {
+    font-family: "Play";
+    line-height: 22px;
+    color: #000;
+    margin-top: 14px;
+}
+
+.person__number, .person__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 31px 0;
+}
+
+.required {
+    color: red;
+}
+
+.btn>span {
+    transform: skew(-45deg);
+    margin-top: 3px;
+}
+
+
+.required {
+    color: red;
+}
+
+
+
+.btn, .btn>span {
+    display: inline-block;
+    
+}
+* {
+    box-sizing: border-box;
+}
+.valid {
+    color: green;
+}
+.btn {
+    width: 220px;
+    
+    color: #c4c4c4;
+    border: 2px solid #c4c4c4;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    outline: 0;
+    cursor: default;
+    font-size: 14px;
+    line-height: 14px;
+    transform: skew(45deg);
+}
+.form__wrapper {
+    max-width:390px;
+    margin: 0 auto;
+}
+.personData-title {
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+}
+.inputs {
+    margin-top: 20px;
+}
+.inputs-item {
+    margin-top: 23px;
+}
+.inputs-item {
+    margin-top: 23px;
+}
+.inputs-item .input-item {
+    background: #fff;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: .6rem;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.personData-title {
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+
+}
+.inputs {
+    margin-top: 20px;
+}
+.input-title {
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000;
+}
+element.style {
+}
+.inputs-item .input-item {
+    background: #fff;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: .6rem;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.inputs-item .input-item {
+    background: #fff;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: .6rem;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+}
+.error-input {
+    color: red;
+    margin-top: 5px;
+}
+* {
+    box-sizing: border-box;
+}
+feuille de style de l’agent utilisateur
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+.form__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+.main-button {
+    font-family: "Play", monospace;
+    font-size: 16px;
+    background: #fff;
+    border: 1px solid #2697ff;
+    box-sizing: border-box;
+    border-radius: 9px;
+    width: 168px;
+    height: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: #7a7a7a;
+    transition: .3s;
+    cursor: pointer;
+}
+.lang-item {
+    font-family: "Play", monospace;
+    display: flex;
+    padding: 8px 12px;
+    border-bottom: 1px solid #dadada;
+    cursor: pointer;
+}
+.lang-item__text {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: #7a7a7a;
+}
+.release-version {
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-top: 40px;
+    text-align: right;
+}
+.person__number {
+    font-family: "Play";
+    line-height: 22px;
+    color: #000;
+    margin-top: 14px;
+}
+
+.person__number, .person__subtitle {
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+
+element.style {
+}
+.required {
+    color: red;
+}
+.active {
+    border-color: #c4c4c4;
+    color: #2697ff;
+    background-color: #dcdbdb;
+}
+.btn, .btn>span {
+    display: inline-block;
+}
+
+.input-title {
+    display: block;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #000;
+}
+.css-2b097c-container {
+    position: relative;
+    box-sizing: border-box;
+}
+.S1{
+    color: green);
+}
+.S2{
+    color: green;
+}
+.S3{
+    color: green;
+}
+.S4{
+    color: green;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    margin-top: 25px;
+    margin-bottom: 47px;
+}
+
+.image-circle-blue, .image-circle-green {
+    max-width: 35px;
+    min-width: 35px;
+    max-height: 35px;
+    min-height: 35px;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 3px;
+}
+
+.image-circle-green {
+    background: #009128;
+}
+.circle-number {
+    position: absolute;
+    top: 8px;
+    right: 13px;
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+.image-block-green {
+    background: #009028;
+    width: 26px;
+    height: 5px;
+}
+
+* {
+    box-sizing: border-box;
+}
+.image-circle-blue, .image-circle-green {
+    max-width: 35px;
+    min-width: 35px;
+    max-height: 35px;
+    min-height: 35px;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 3px;
+}
+
+.image-circle-green {
+    background: #009128;
+}
+.circle-number {
+    position: absolute;
+    top: 8px;
+    right: 13px;
+    color: #fff;
+}
+.image-block-green {
+    background: #009028;
+    width: 26px;
+    height: 5px;
+}
+.image-block-blue {
+    background: #2697ff;
+    width: 26px;
+    height: 5px;
+}.image-circle-blue {
+    background: #2697ff;
+}
+
+.image-circle-blue, .image-circle-green {
+    max-width: 35px;
+    min-width: 35px;
+    max-height: 35px;
+    min-height: 35px;
+    border-radius: 20px;
+    position: relative;
+    margin: 0 3px;
+}
+
+.css-2b097c-container {
+    position: relative;
+    box-sizing: border-box;
+}
+.css-yk16xz-control {
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(204, 204, 204);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: default;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    min-height: 38px;
+    position: relative;
+    transition: 100ms;
+    box-sizing: border-box;
+    outline: 0px !important;
+}
+.css-1hwfws3 {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    flex: 1 1 0%;
+    flex-wrap: wrap;
+    padding: 2px 8px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.css-1uccc91-singleValue {
+    color: rgb(51, 51, 51);
+    margin-left: 2px;
+    margin-right: 2px;
+    max-width: calc(100% - 8px);
+    overflow: hidden;
+    position: absolute;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    top: 50%;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+}
+input[type="hidden" i] {
+    display: none !important;
+    background-color: initial;
+    border-color: initial;
+    border-radius: initial;
+}
+feuille de style de l’agent utilisateur
+input:not([type="image" i], [type="range" i], [type="checkbox" i], [type="radio" i]) {
+    overflow-clip-margin: 0px !important;
+    overflow: clip !important;
+}
+feuille de style de l’agent utilisateur
+input[type="hidden" i] {
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    padding: initial;
+    border: initial;
+}
+feuille de style de l’agent utilisateur
+input:not([type="file" i], [type="image" i], [type="checkbox" i], [type="radio" i]) {
+}
+feuille de style de l’agent utilisateur
+input {
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-variant-alternates: ;
+    font-variant-position: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: ;
+    font-optical-sizing: ;
+    font-size-adjust: ;
+    font-kerning: ;
+    font-feature-settings: ;
+    font-variation-settings: ;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 0px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    padding-block: 1px;
+    padding-inline: 2px;
+}
+.payment-subtitle, .payment-title {
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+
+.payment-title {
+    font-size: 18px;
+    line-height: 25px;
+    color: #000;
+}
+.payment-subtitle {
+    line-height: 19px;
+    color: #7a7a7a;
+    margin-bottom: 24px;
+}
+
+.payment-subtitle, .payment-title {
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+}
+.payment .payment-info {
+    max-width: 454px;
+    margin: 0 auto;
+}
+.payment .payment-info .payment-info__title {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    color: #000;
+}
+.payment .payment-info .payment-info__row {
+    display: flex;
+}
+.payment .payment-info .payment-info__row div {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    color: #7a7a7a;
+    width: 150px;
+}
+.payment .payment-info .payment-info__row span {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    color: #000;
+    width: 200px;
+}
+.payment .payment-info .payment-info__row {
+    display: flex;
+}
+.payment-method {
+    display: flex;
+    margin: 12px 0;
+    justify-content: space-between;
+}
+.pay-card {
+    padding: 5px;
+    text-align: center;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 9px rgba(0, 0, 0, .25);
+    border-radius: 6px;
+    width: 144px;
+    height: 66px;
+    margin-top: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.confirm__footer, .pay-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pay-card:hover {
+    border: 2px solid #2697ff;
+}
+
+.pay-card {
+    padding: 5px;
+    text-align: center;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 9px rgba(0, 0, 0, .25);
+    border-radius: 6px;
+    width: 144px;
+    height: 66px;
+    margin-top: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.confirm__footer, .pay-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.confirm__footer, .pay-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.payment-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}

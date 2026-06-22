@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="description" content="Page de paiement pour le portail de pré-enrôlement du passeport électronique du Cameroun">
+  <link rel="icon" href="aa.jfif">
+  <link rel="stylesheet" href="style1.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Paiement - Cameroun</title>
+  <style>
+    .payment-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .payment-header h1 {
+      font-size: 24px;
+      margin-bottom: 4px;
+      color: #111;
+      font-weight: 700;
+    }
+    .payment-header p {
+      color: #555;
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+    .payment-card {
+      background: #fff;
+      border: 1px solid #dfe3e8;
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 8px 26px rgba(42,52,79,.08);
+      margin-bottom: 24px;
+    }
+    .payment-info {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 20px 32px;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+    .payment-info span {
+      color: #555;
+      font-size: 14px;
+    }
+    .payment-info .label {
+      font-weight: 600;
+      color: #2e3e4e;
+    }
+    .payment-info .value {
+      justify-self: end;
+      font-weight: 700;
+      color: #111;
+    }
+    .payment-methods {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+    .payment-method {
+      position: relative;
+      border: 1px solid #dde2eb;
+      border-radius: 14px;
+      background: #fff;
+      padding: 16px;
+      min-height: 100px;
+      cursor: pointer;
+      transition: border-color .3s, box-shadow .3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .payment-method.selected {
+      border-color: #0cbaa4;
+      box-shadow: 0 0 0 3px rgba(12,186,164,.12);
+    }
+    .payment-method img {
+      max-height: 42px;
+      max-width: 100%;
+    }
+    .payment-methods label {
+      width: 100%;
+      height: 100%;
+    }
+    .payment-method input {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      margin: 0;
+      z-index: 1;
+    }
+    .payment-field {
+      margin-bottom: 18px;
+    }
+    .payment-field label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+      color: #4d596a;
+      font-weight: 600;
+    }
+    .phone-input-wrapper {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .phone-prefix {
+      min-width: 110px;
+      border: 1px solid #dfe3eb;
+      border-radius: 8px;
+      background: #f9fbfd;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #333;
+      padding: 10px 12px;
+    }
+    .phone-input {
+      flex: 1;
+    }
+    .form__footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .form__footer .main-button {
+      width: 180px;
+    }
+    .page-title {
+      font-size: 15px;
+      color: #009028;
+      text-align: center;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .steps {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .step-dot {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .step-line {
+      flex: 1;
+      height: 4px;
+      background: #0cbaa4;
+      min-width: 40px;
+    }
+    .step-dot.green { background: #009128; }
+    .step-dot.blue { background: #2697ff; }
+    .page-section {
+      max-width: 660px;
+      margin: auto;
+    }
+    .payment-card .section-label {
+      display: block;
+      margin-bottom: 16px;
+      color: #2e3e4e;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+<div id="root"><div><div class="layout"><div class="wr">
+
+<header class="purple">
+  <div class="purple-wrap">
+    <div class="purple-wrap-image"><img src="Police.png" alt="Police"></div>
+    <div class="purple-wrap-image"><img src="a.png" alt="Augentic PassCam"></div>
+  </div>
+</header>
+
+<div class="app">
+  <div class="switch">
+    <div class="form page-section">
+      <div class="payment-header">
+        <div class="page-title">Paiement</div>
+        <h1>Page de paiement</h1>
+        <p>Choisissez le mode de paiement</p>
+      </div>
+
+      <div class="steps">
+        <div class="step-dot green">1</div>
+        <div class="step-line"></div>
+        <div class="step-dot green">2</div>
+        <div class="step-line"></div>
+        <div class="step-dot green">3</div>
+        <div class="step-line"></div>
+        <div class="step-dot blue">4</div>
+        <div class="step-line"></div>
+        <div class="step-dot blue">5</div>
+      </div>
+
+      <div class="payment-card">
+        <span class="section-label">Informations du paiement</span>
+        <div class="payment-info">
+          <span class="label">Nom du produit:</span>
+          <span class="value">Frais de passeport</span>
+          <span class="label">Montant:</span>
+          <span class="value">110000 XAF</span>
+        </div>
+
+        <div class="payment-methods">
+          <label class="payment-method selected" data-method="card">
+            <input type="radio" name="payment_method" value="card" checked>
+            <img src="v.svg" alt="Visa / Mastercard" title="Visa / Mastercard">
+          </label>
+          <label class="payment-method" data-method="mobile">
+            <input type="radio" name="payment_method" value="mobile">
+            <img src="m.svg" alt="MTN, Orange, Yoomee" title="MTN / Orange / Yoomee">
+          </label>
+        </div>
+
+        <div class="payment-field">
+          <label for="payer-name">Votre nom</label>
+          <input id="payer-name" class="form-control" type="text" placeholder="Votre nom" autocomplete="name">
+        </div>
+        <div class="payment-field">
+          <label for="payer-phone">Numéro de téléphone</label>
+          <div class="phone-input-wrapper">
+            <div class="phone-prefix">+237</div>
+            <input id="payer-phone" class="form-control phone-input" type="tel" placeholder="6 00 00 00 00" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="form__footer">
+          <button onclick="window.location.href='recap.html'" class="main-button" type="button">Annuler</button>
+          <button id="payButton" class="main-button" type="button">Payer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="release-version">V.20220622-1700cmr-1.90-329-g1dfc1ebcaa </footer>
+
+</div></div></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+  crossorigin="anonymous"></script>
+<script>
+  document.querySelectorAll('.payment-method').forEach(function(card) {
+    card.addEventListener('click', function() {
+      document.querySelectorAll('.payment-method').forEach(function(item) {
+        item.classList.remove('selected');
+        item.querySelector('input').checked = false;
+      });
+      card.classList.add('selected');
+      card.querySelector('input').checked = true;
+    });
+  });
+
+  document.getElementById('payButton').addEventListener('click', function() {
+    var name = document.getElementById('payer-name').value.trim();
+    var phone = document.getElementById('payer-phone').value.trim();
+    if (!name || !phone) {
+      alert('Veuillez renseigner votre nom et votre numéro de téléphone.');
+      return;
+    }
+    window.location.href = 'resultat.html';
+  });
+</script>
+</body>
+</html>

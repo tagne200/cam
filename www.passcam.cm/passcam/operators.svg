@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="60" viewBox="0 0 160 60">
+  <rect width="160" height="60" fill="none"/>
+  <g>
+    <rect x="0" y="6" width="70" height="48" rx="8" fill="#FF7900"/>
+    <text x="12" y="38" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">ORANGE</text>
+    <rect x="80" y="6" width="70" height="48" rx="8" fill="#FFD100"/>
+    <text x="92" y="38" fill="#982300" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">MTN</text>
+  </g>
+</svg>
