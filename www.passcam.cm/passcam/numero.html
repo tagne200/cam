@@ -70,9 +70,9 @@
     </svg>
     <span class="prefix-code">+237</span>
   </div>
-  <input class="sign-input phone-number-input" placeholder="6XX XXX XXX" type="tel" id="phoneNumber">
+  <input class="sign-input phone-number-input" placeholder="6XX XXX XXX" type="tel" inputmode="numeric" id="phoneNumber" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
 </div></div></div></div><div class="sign-footer">
-    <button onclick="window.location.href='index.html'"  class="main-button" type="button">Précédent</button><button onclick="window.location.href='cmmencons.html'" class="main-button" type="button">Suivant</button></div></div>
+    <button onclick="window.location.href='index.html'"  class="main-button" type="button">Précédent</button><button onclick="saveStartPhone()" class="main-button" type="button">Suivant</button></div></div>
     <div class="select-main"><div class="button__lang"><div class="lang-item"><div class="lang-item__text">FR</div></div></div></div>
    </div><br><br>
     <footer class="release-version">V.20220622-1700cmr-1.90-329-g1dfc1ebcaa </footer>
@@ -81,5 +81,18 @@
 </div>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+    // Pré-remplit le numéro si l'utilisateur revient sur la page
+    (function(){
+      var saved = localStorage.getItem('startPhone');
+      if (saved) document.getElementById('phoneNumber').value = saved;
+    })();
+    function saveStartPhone() {
+      var num = document.getElementById('phoneNumber').value.trim();
+      if (!num) { alert('Veuillez entrer votre numéro de téléphone.'); return; }
+      localStorage.setItem('startPhone', num);
+      window.location.href = 'cmmencons.html';
+    }
+    </script>
   </body>
 </html>

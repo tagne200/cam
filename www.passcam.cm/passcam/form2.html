@@ -8,17 +8,15 @@
     <link rel="icon" href="aa.jfif">
     <link rel="stylesheet" href="style2.css">
     <style>
-    /* ── Breadcrumb Tabs ── */
-    .tabs { display:flex; width:100%; margin:10px 0 20px; height:46px; border:1px solid #c8c8c8; border-radius:3px; overflow:hidden; }
+    /* ── Breadcrumb Tabs (plat, non cliquable) ── */
+    .tabs { display:flex; width:100%; margin:10px 0 24px; height:40px; background:#ececec; border:1px solid #d6d6d6; border-radius:2px; overflow:hidden; pointer-events:none; }
+    .tabs * { pointer-events:none !important; cursor:default !important; }
     .btn-wrap { flex:1; display:flex; position:relative; }
     .btn-wrap:nth-child(1){ z-index:4; } .btn-wrap:nth-child(2){ z-index:3; } .btn-wrap:nth-child(3){ z-index:2; } .btn-wrap:nth-child(4){ z-index:1; }
-    .btn-wrap .btn { flex:1; display:flex; align-items:center; justify-content:center; padding:8px 8px 8px 22px; background:#ebebeb; position:relative; text-align:center; cursor:pointer; }
-    .btn-wrap:first-child .btn { padding-left:10px; }
-    .btn-wrap:not(:last-child) .btn::before { content:''; position:absolute; top:0; right:-15px; border-top:23px solid transparent; border-bottom:23px solid transparent; border-left:15px solid #c8c8c8; z-index:2; }
-    .btn-wrap:not(:last-child) .btn::after  { content:''; position:absolute; top:0; right:-13px; border-top:23px solid transparent; border-bottom:23px solid transparent; border-left:13px solid #ebebeb; z-index:3; }
-    .btn-wrap .btn.active { background:#dcdcdc; }
-    .btn-wrap .btn.active::after { border-left-color:#dcdcdc; }
-    .btn-wrap .btn > span { font-size:11.5px; font-weight:600; color:#c0392b; line-height:1.3; position:relative; z-index:5; cursor:pointer; }
+    .btn-wrap .btn { flex:1; display:flex; align-items:center; justify-content:center; padding:6px 14px; background:#ececec !important; position:relative; text-align:center; border:none !important; box-shadow:none !important; transform:none !important; }
+    .btn-wrap .btn.active { background:#ececec !important; }
+    .btn-wrap:not(:last-child) .btn::after { content:''; position:absolute; top:50%; right:-7px; width:13px; height:13px; transform:translateY(-50%) rotate(45deg); border-top:1px solid #bfbfbf; border-right:1px solid #bfbfbf; background:#ececec; z-index:3; }
+    .btn-wrap .btn > span { font-size:12.5px; font-weight:600; color:#c0392b; line-height:1.3; position:relative; z-index:5; transform:none !important; }
     .btn-wrap .btn.valid > span { color:#27ae60; }
     /* ── Validation ── */
     .field-error { border:2px solid #e74c3c !important; background:#fff8f8 !important; }
@@ -121,13 +119,7 @@
                                 </select></div>
                             <div class="inputs-item"><label class="input-title">Date de naissance<span
                                         class="required">*</span></label>
-                                <div class="input-group">
-                                    <div class="react-datepicker-wrapper">
-                                        <div class="react-datepicker__input-container"><input type="text"
-                                                placeholder="dd.mm.yyyy" class="input-item" value=""></div>
-                                    </div><br>
-                                    
-                                </div>
+                                <input type="date" class="input-item" name="birthDate" value=""><br><br>
                                 <input type="checkbox" name="" id=""><span>Je ne connais pas ma date de naissance</span>
                             </div>
                             <div class="inputs-item"><label class="input-title">Pays de résidence<span
@@ -142,25 +134,28 @@
                             <div><span>Phone number</span><span
                                 class="required">*</span></div>
                             <div class="inputs-item"><label class="input-title">Numéro<span
-                                class="required">*</span></label><input type="text" class="input-item"
-                            placeholder="Phone" name="surname" value=""></div>
+                                class="required">*</span></label><input type="tel" inputmode="numeric" id="res-phone" class="input-item"
+                            placeholder="Numéro de téléphone" name="phone" value="" oninput="this.value=this.value.replace(/[^0-9]/g,'')"></div>
                             <div class="inputs-item"><label class="input-title">Adresse électronique<span
-                                class="required">*</span></label><input type="text" class="input-item"
-                            placeholder="Adresse électronique" name="surname" value=""></div><br>
+                                class="required">*</span></label><input type="email" id="res-email" class="input-item"
+                            placeholder="Adresse électronique" name="email" value=""></div><br>
                             <div><span>Lieu de résidence</span><span
                                 class="required">*</span></div>
                             <div class="inputs-item"><label class="input-title">Pays<span
                                 class="required">*</span></label><input type="text" class="input-item"
                             placeholder="CAMEROUN" name="surname" value="CAMEROUN"></div>
                             <div class="inputs-item"><label class="input-title">Région<span
-                                class="required">*</span></label><input type="text" class="input-item"
-                            placeholder="Région" name="surname" value=""></div>
+                                class="required">*</span></label><select class="input-item" id="res-region" name="resRegion">
+                                <option value="">-- Sélectionner la région --</option>
+                            </select></div>
                             <div class="inputs-item"><label class="input-title">Département<span
-                                class="required">*</span></label><input type="text" class="input-item"
-                            placeholder="Département" name="surname" value=""></div>
+                                class="required">*</span></label><select class="input-item" id="res-departement" name="resDepartement">
+                                <option value="">-- Sélectionner le département --</option>
+                            </select></div>
                             <div class="inputs-item"><label class="input-title">Lieu<span
-                                class="required">*</span></label><input type="text" class="input-item"
-                            placeholder="Lieu" name="surname" value=""></div>
+                                class="required">*</span></label><select class="input-item" id="res-lieu" name="resLieu">
+                                <option value="">-- Sélectionner le lieu --</option>
+                            </select></div>
                             <div class="inputs-item"><label class="input-title">Rue<span
                                         class="required">*</span></label><input type="text" class="input-item"
                                     placeholder="Détails du lieu de résidence" name="resAddressStreet" value=""></div>
@@ -223,6 +218,145 @@
         msg.style.display = 'block';
         setTimeout(function(){ msg.style.display = 'none'; }, 3000);
     }
+
+    /* ─────────────────────────────────────────────
+       Découpage administratif du Cameroun
+       Région -> Département -> Lieu (arrondissement)
+    ───────────────────────────────────────────── */
+    var CM_DATA = {
+      "Adamaoua": {
+        "Djérem": ["Tibati", "Ngaoundal"],
+        "Faro-et-Déo": ["Tignère", "Galim-Tignère", "Kontcha", "Mayo-Baléo"],
+        "Mayo-Banyo": ["Banyo", "Bankim", "Mayo-Darlé"],
+        "Mbéré": ["Meiganga", "Dir", "Djohong", "Ngaoui"],
+        "Vina": ["Ngaoundéré 1er", "Ngaoundéré 2e", "Ngaoundéré 3e", "Belel", "Mbé", "Nganha", "Nyambaka", "Martap"]
+      },
+      "Centre": {
+        "Haute-Sanaga": ["Nanga-Eboko", "Bibey", "Lembé-Yézoum", "Mbandjock", "Minta", "Nkoteng", "Nsem"],
+        "Lékié": ["Monatélé", "Batchenga", "Ebebda", "Elig-Mfomo", "Évodoula", "Lobo", "Obala", "Okola", "Sa'a"],
+        "Mbam-et-Inoubou": ["Bafia", "Bokito", "Deuk", "Kiiki", "Kon-Yambetta", "Makénéné", "Ndikiniméki", "Nitoukou", "Ombessa"],
+        "Mbam-et-Kim": ["Ntui", "Mbangassina", "Ngambè-Tikar", "Ngoro", "Yoko"],
+        "Méfou-et-Afamba": ["Mfou", "Afanloum", "Assamba", "Awaé", "Edzendouan", "Esse", "Nkolafamba", "Olanguina", "Soa"],
+        "Méfou-et-Akono": ["Ngoumou", "Akono", "Bikok", "Mbankomo"],
+        "Mfoundi": ["Yaoundé 1er", "Yaoundé 2e", "Yaoundé 3e", "Yaoundé 4e", "Yaoundé 5e", "Yaoundé 6e", "Yaoundé 7e"],
+        "Nyong-et-Kéllé": ["Éséka", "Biyouha", "Bondjock", "Bot-Makak", "Dibang", "Makak", "Matomb", "Messondo", "Ngog-Mapubi", "Nguibassal"],
+        "Nyong-et-Mfoumou": ["Akonolinga", "Ayos", "Endom", "Mengang", "Nyakokombo"],
+        "Nyong-et-So'o": ["Mbalmayo", "Akoeman", "Dzeng", "Mengueme", "Ngomedzap", "Nkolmetet"]
+      },
+      "Est": {
+        "Boumba-et-Ngoko": ["Yokadouma", "Gari-Gombo", "Moloundou", "Salapoumbé"],
+        "Haut-Nyong": ["Abong-Mbang", "Angossas", "Atok", "Dimako", "Doumaintang", "Doumé", "Lomié", "Mboma", "Messamena", "Messok", "Mindourou", "Ngoyla", "Nguelemendouka", "Somalomo"],
+        "Kadey": ["Batouri", "Kentzou", "Kette", "Mbang", "Ndélélé", "Nguélébok", "Ouli"],
+        "Lom-et-Djérem": ["Bertoua 1er", "Bertoua 2e", "Bélabo", "Bétaré-Oya", "Diang", "Garoua-Boulaï", "Mandjou", "Ngoura"]
+      },
+      "Extrême-Nord": {
+        "Diamaré": ["Maroua 1er", "Maroua 2e", "Maroua 3e", "Bogo", "Dargala", "Gazawa", "Méri", "Ndoukoula", "Pétté"],
+        "Logone-et-Chari": ["Kousséri", "Blangoua", "Darak", "Fotokol", "Goulfey", "Hilé-Alifa", "Logone-Birni", "Makary", "Waza", "Zina"],
+        "Mayo-Danay": ["Yagoua", "Datcheka", "Gobo", "Guéré", "Kai-Kai", "Kalfou", "Kar-Hay", "Maga", "Tchatibali", "Vélé", "Wina"],
+        "Mayo-Kani": ["Kaélé", "Dziguilao", "Guidiguis", "Mindif", "Moulvoudaye", "Moutourwa", "Porhi", "Taïbong", "Touloum"],
+        "Mayo-Sava": ["Mora", "Kolofata", "Tokombéré"],
+        "Mayo-Tsanaga": ["Mokolo", "Bourrha", "Hina", "Koza", "Mogodé", "Mozogo", "Soulédé-Roua"]
+      },
+      "Littoral": {
+        "Moungo": ["Nkongsamba 1er", "Nkongsamba 2e", "Nkongsamba 3e", "Baré-Bakem", "Bonaléa", "Dibombari", "Ébone", "Loum", "Manjo", "Mbanga", "Melong", "Mombo", "Njombé-Penja", "Nlonako"],
+        "Nkam": ["Yabassi", "Nkondjock", "Nord-Makombé", "Yingui"],
+        "Sanaga-Maritime": ["Édéa 1er", "Édéa 2e", "Dibamba", "Dizangué", "Massock-Songloulou", "Mouanko", "Ndom", "Ngambè", "Ngwei", "Nyanon", "Pouma"],
+        "Wouri": ["Douala 1er", "Douala 2e", "Douala 3e", "Douala 4e", "Douala 5e", "Douala 6e", "Manoka"]
+      },
+      "Nord": {
+        "Bénoué": ["Garoua 1er", "Garoua 2e", "Garoua 3e", "Bascheo", "Bibémi", "Dembo", "Demsa", "Gashiga", "Lagdo", "Ngong", "Pitoa", "Touroua"],
+        "Faro": ["Poli", "Beka"],
+        "Mayo-Louti": ["Guider", "Figuil", "Mayo-Oulo"],
+        "Mayo-Rey": ["Tcholliré", "Madingring", "Rey-Bouba", "Touboro"]
+      },
+      "Nord-Ouest": {
+        "Boyo": ["Fundong", "Belo", "Bum", "Njinikom"],
+        "Bui": ["Kumbo", "Jakiri", "Mbven", "Nkum", "Noni", "Oku"],
+        "Donga-Mantung": ["Nkambé", "Ako", "Misaje", "Ndu", "Nwa"],
+        "Menchum": ["Wum", "Furu-Awa", "Benakuma", "Zhoa"],
+        "Mezam": ["Bamenda 1er", "Bamenda 2e", "Bamenda 3e", "Bafut", "Bali", "Santa", "Tubah"],
+        "Momo": ["Mbengwi", "Andek", "Batibo", "Njikwa", "Widikum"],
+        "Ngo-Ketunjia": ["Ndop", "Babessi", "Balikumbat"]
+      },
+      "Ouest": {
+        "Bamboutos": ["Mbouda", "Babadjou", "Batcham", "Galim"],
+        "Haut-Nkam": ["Bafang", "Bakou", "Bana", "Bandja", "Banka", "Kékem"],
+        "Hauts-Plateaux": ["Baham", "Bamendjou", "Bangou", "Batié"],
+        "Koung-Khi": ["Bandjoun", "Bayangam", "Djebem"],
+        "Menoua": ["Dschang", "Fokoué", "Fongo-Tongo", "Nkong-Zem", "Penka-Michel", "Santchou"],
+        "Mifi": ["Bafoussam 1er", "Bafoussam 2e", "Bafoussam 3e"],
+        "Ndé": ["Bangangté", "Bassamba", "Bazou", "Tonga"],
+        "Noun": ["Foumban", "Bangourain", "Foumbot", "Kouoptamo", "Koutaba", "Magba", "Malantouen", "Massangam", "Njimom"]
+      },
+      "Sud": {
+        "Dja-et-Lobo": ["Sangmélima", "Bengbis", "Djoum", "Meyomessala", "Mintom", "Oveng", "Zoétélé"],
+        "Mvila": ["Ebolowa 1er", "Ebolowa 2e", "Biwong-Bané", "Biwong-Bulu", "Efoulan", "Mengong", "Mvangan", "Ngoulemakong"],
+        "Océan": ["Kribi 1er", "Kribi 2e", "Akom II", "Bipindi", "Campo", "Lokoundjé", "Lolodorf", "Mvengué", "Niété"],
+        "Vallée-du-Ntem": ["Ambam", "Kyé-Ossi", "Ma'an", "Olamze"]
+      },
+      "Sud-Ouest": {
+        "Fako": ["Limbé 1er", "Limbé 2e", "Limbé 3e", "Buéa", "Idenau", "Muyuka", "Tiko", "West Coast"],
+        "Koupé-Manengouba": ["Bangem", "Nguti", "Tombel"],
+        "Lebialem": ["Menji (Fontem)", "Alou", "Wabane"],
+        "Manyu": ["Mamfé", "Akwaya", "Eyumojock", "Tinto"],
+        "Meme": ["Kumba 1er", "Kumba 2e", "Kumba 3e", "Konye", "Mbonge"],
+        "Ndian": ["Mundemba", "Bamusso", "Dikome-Balue", "Ekondo-Titi", "Idabato", "Isangele", "Kombo-Abedimo", "Kombo-Itindi", "Toko"]
+      }
+    };
+
+    (function initCascade() {
+      var regionSel = document.getElementById('res-region');
+      var deptSel   = document.getElementById('res-departement');
+      var lieuSel   = document.getElementById('res-lieu');
+      if (!regionSel || !deptSel || !lieuSel) return;
+
+      function reset(sel, placeholder) {
+        sel.innerHTML = '<option value="">' + placeholder + '</option>';
+      }
+      function fill(sel, items, placeholder) {
+        reset(sel, placeholder);
+        items.forEach(function(it) {
+          var o = document.createElement('option');
+          o.value = it; o.textContent = it;
+          sel.appendChild(o);
+        });
+      }
+
+      // Remplit la liste des régions
+      fill(regionSel, Object.keys(CM_DATA), '-- Sélectionner la région --');
+      reset(deptSel, '-- Sélectionner le département --');
+      reset(lieuSel, '-- Sélectionner le lieu --');
+
+      regionSel.addEventListener('change', function() {
+        var region = this.value;
+        if (region && CM_DATA[region]) {
+          fill(deptSel, Object.keys(CM_DATA[region]), '-- Sélectionner le département --');
+        } else {
+          reset(deptSel, '-- Sélectionner le département --');
+        }
+        reset(lieuSel, '-- Sélectionner le lieu --');
+      });
+
+      deptSel.addEventListener('change', function() {
+        var region = regionSel.value;
+        var dept = this.value;
+        if (region && dept && CM_DATA[region] && CM_DATA[region][dept]) {
+          fill(lieuSel, CM_DATA[region][dept], '-- Sélectionner le lieu --');
+        } else {
+          reset(lieuSel, '-- Sélectionner le lieu --');
+        }
+      });
+    })();
+
+    /* Récupère le numéro de téléphone (et l'email) saisis au départ */
+    (function prefillContact() {
+      var phone = localStorage.getItem('startPhone');
+      var email = localStorage.getItem('startEmail');
+      var phoneField = document.getElementById('res-phone');
+      var emailField = document.getElementById('res-email');
+      if (phone && phoneField && !phoneField.value) phoneField.value = phone;
+      if (email && emailField && !emailField.value) emailField.value = email;
+    })();
     </script>
 </body>
 

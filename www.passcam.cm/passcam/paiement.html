@@ -80,6 +80,12 @@
       max-height: 42px;
       max-width: 100%;
     }
+    .card-logos {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .card-logos img { max-height: 36px; }
     .payment-methods label {
       width: 100%;
       height: 100%;
@@ -220,14 +226,25 @@
         </div>
 
         <div class="payment-methods">
-          <label class="payment-method selected" data-method="card">
-            <input type="radio" name="payment_method" value="card" checked>
-            <img src="v.svg" alt="Visa / Mastercard" title="Visa / Mastercard">
+          <label class="payment-method" data-method="card">
+            <input type="radio" name="payment_method" value="card">
+            <span class="card-logos">
+              <img src="v.svg" alt="Visa" title="Visa">
+              <img src="m.svg" alt="Mastercard" title="Mastercard">
+            </span>
           </label>
-          <label class="payment-method" data-method="mobile">
-            <input type="radio" name="payment_method" value="mobile">
-            <img src="m.svg" alt="MTN, Orange, Yoomee" title="MTN / Orange / Yoomee">
+          <label class="payment-method selected" data-method="mobile">
+            <input type="radio" name="payment_method" value="mobile" checked>
+            <img src="operators.svg" alt="MTN, Orange, Camtel, YooMee" title="MTN / Orange / Camtel / YooMee">
           </label>
+        </div>
+
+        <div class="payment-field">
+          <label for="payment-mode">Mode de paiement</label>
+          <select id="payment-mode" class="form-control">
+            <option value="orange" selected>Orange-Money</option>
+            <option value="mtn">MTN-Money</option>
+          </select>
         </div>
 
         <div class="payment-field">
@@ -238,7 +255,7 @@
           <label for="payer-phone">Numéro de téléphone</label>
           <div class="phone-input-wrapper">
             <div class="phone-prefix">+237</div>
-            <input id="payer-phone" class="form-control phone-input" type="tel" placeholder="6 00 00 00 00" autocomplete="tel">
+            <input id="payer-phone" class="form-control phone-input" type="tel" inputmode="numeric" placeholder="6 00 00 00 00" autocomplete="tel" oninput="this.value=this.value.replace(/[^0-9]/g,'')">
           </div>
         </div>
 
@@ -277,6 +294,9 @@
       alert('Veuillez renseigner votre nom et votre numéro de téléphone.');
       return;
     }
+    // Mémorise le mode de paiement choisi pour la page de résultat
+    var mode = document.getElementById('payment-mode').value;
+    localStorage.setItem('paymentMode', mode);
     window.location.href = 'resultat.html';
   });
 </script>

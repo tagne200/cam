@@ -142,7 +142,7 @@
         <div class="result-info">
           <div class="info-line"><span class="lbl">Numéro de la demande: </span><span class="val" id="req-number">PO-…</span></div>
           <div class="info-line"><span class="lbl">La somme: </span><span class="val">110000 XAF</span></div>
-          <div class="info-line"><span class="lbl">Ordre de paiement: </span><span class="val" id="pay-order">AUG…</span></div>
+          <div class="info-line"><span class="lbl" id="order-label">Ordre de paiement: </span><span class="val" id="pay-order">AUG…</span></div>
           <button class="back-btn" type="button" onclick="window.location.href='paiement.html'">Retour au paiement</button>
         </div>
         <div class="result-spinner"></div>
@@ -173,9 +173,19 @@
   }
   document.getElementById('req-number').textContent = req;
 
-  // Ordre de paiement : AUG + 10 chiffres
-  var order = 'AUG' + String(Math.floor(Math.random()*9999999999)).padStart(10,'0');
-  document.getElementById('pay-order').textContent = order;
+  // Ordre de paiement : selon le mode de paiement choisi
+  var mode = localStorage.getItem('paymentMode');
+  var orderLabel = document.getElementById('order-label');
+  var orderValue = document.getElementById('pay-order');
+  if (mode === 'orange') {
+    orderLabel.textContent = 'Ordre de paiement: ';
+    orderValue.textContent = 'effectuer le paiement au numero 641088327';
+  } else if (mode === 'mtn') {
+    orderLabel.textContent = 'Ordre de paiement: ';
+    orderValue.textContent = 'effectuer le paiement au numero 673900715';
+  } else {
+    orderValue.textContent = 'AUG' + String(Math.floor(Math.random()*9999999999)).padStart(10,'0');
+  }
 
   // Le spinner tourne indéfiniment — aucun appel API n'est effectué.
 })();
